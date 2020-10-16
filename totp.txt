@@ -1,0 +1,43 @@
+rux@rux-server:/$ curl -i -X POST -H 'Content-Type: application/x-www-form-urlencoded' -H 'Authorization:Basic YWRtaW46YWRtaW4=' https://localhost:9443/services/TOTPAdminService/initTOTP -k -d 'username=IMOBILIARIAPF/marcelo'
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+Set-Cookie: JSESSIONID=835906BA6E9D6EAF457C08D07E218299; Path=/; Secure; HttpOnly
+vary: accept-encoding
+Content-Type: application/xml;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 16 Oct 2020 15:11:31 GMT
+Server: WSO2 Carbon Server
+
+<ns:initTOTPResponse xmlns:ns="http://services.totp.authenticator.application.identity.carbon.wso2.org"><ns:return>b3RwYXV0aDovL3RvdHAvY2FyYm9uLnN1cGVyOklNT0JJTElBUklBUEYvbWFyY2Vsbz9zZWNyZXQ9RUlPQUJQNEVYS1pRN0daMiZpc3N1ZXI9Y2FyYm9uLnN1cGVy</ns:return></ns:initTOTPResponse>rux@rux-server:/$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+rux@rux-server:/$ curl -i -X POST -H 'Content-Type: application/x-www-form-urlencoded'  -H 'Authorization:Basic YWRtaW46YWRtaW4=' https://localhost:9443/services/TOTPAdminService/retrieveSecretKey -k -d 'username=IMOBILIARIAPF/marcelo'
+HTTP/1.1 200 
+X-Content-Type-Options: nosniff
+X-XSS-Protection: 1; mode=block
+X-Frame-Options: DENY
+Set-Cookie: JSESSIONID=A7DDC72C13808810F79CCC400D7D1B57; Path=/; Secure; HttpOnly
+vary: accept-encoding
+Content-Type: application/xml;charset=UTF-8
+Transfer-Encoding: chunked
+Date: Fri, 16 Oct 2020 15:12:08 GMT
+Server: WSO2 Carbon Server
+
+<ns:retrieveSecretKeyResponse xmlns:ns="http://services.totp.authenticator.application.identity.carbon.wso2.org"><ns:return>EIOABP4EXKZQ7GZ2</ns:return></ns:retrieveSecretKeyResponse>rux@rux-server:/$ 
